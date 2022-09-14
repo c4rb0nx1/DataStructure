@@ -1,0 +1,53 @@
+#include "stdio.h"
+#include "stdlib.h"
+
+struct node
+{
+  int data;
+  struct node *next;
+}*t,*h,*n;
+
+int c=0,a,m,f;
+void main(void)
+{
+   
+  while(c==0)
+  {
+    printf("press 1 if you want to create a node :\n");
+    printf("press 2 if you want see a node :\n");
+    scanf("%d",&a);
+    switch(a)
+    {
+      case 1:
+              n=(struct node*)malloc(sizeof(struct node));
+              printf("enter a number :");
+              scanf("%d",&n->data);
+              n->next=NULL;
+              if(f==0)
+              {
+                h=n;
+                t=n;
+                f=1;
+              }
+              else
+              {
+                while (t->next!=NULL)
+                {
+                  t=t->next;
+                }
+                t->next=n;
+              }
+              break;
+      case 2:
+              t=h;
+              while (t->next != NULL) {
+                printf("%d --->",t->data);
+                t=t->next;
+              }
+              printf("%d --->|NULL|",t->data );
+              break;
+    }
+    printf("\n enter 0 to continue again...");
+    scanf("%d",&c);
+  }
+}
