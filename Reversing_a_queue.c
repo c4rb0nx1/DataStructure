@@ -1,4 +1,4 @@
-//QUEUE REVERSING USING STACK:
+//Reversng a queue:
 #include <stdio.h>
 #include<stdlib.h>
 #define size 5
